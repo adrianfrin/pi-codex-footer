@@ -1,0 +1,19 @@
+{
+  "name": "pi-codex-footer",
+  "version": "0.1.0",
+  "description": "A minimal Pi footer: model-reasoning, context, Codex quota reset times and available reset credits.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["pi-package", "codex", "footer", "quota"],
+  "repository": {"type": "git", "url": "git+https://github.com/adrianfrin/pi-codex-footer.git"},
+  "homepage": "https://github.com/adrianfrin/pi-codex-footer#readme",
+  "bugs": {"url": "https://github.com/adrianfrin/pi-codex-footer/issues"},
+  "files": ["src", "docs/images", "README.md", "README.zh-CN.md", "LICENSE"],
+  "pi": {"extensions": ["./src/index.ts"], "image": "https://raw.githubusercontent.com/adrianfrin/pi-codex-footer/main/docs/images/preview.png"},
+  "engines": {"node": ">=22.13.0"},
+  "peerDependencies": {"@earendil-works/pi-coding-agent": "*", "@earendil-works/pi-tui": "*"},
+  "dependencies": {"@narumitw/pi-usage": "0.60.8"},
+  "bundledDependencies": ["@narumitw/pi-usage"],
+  "devDependencies": {"@earendil-works/pi-coding-agent": "0.85.1", "@earendil-works/pi-tui": "0.85.1", "@types/node": "^22.0.0", "tsx": "^4.20.0", "typescript": "^5.9.0"},
+  "scripts": {"typecheck": "tsc --noEmit", "test": "tsx --test test/*.test.ts", "check": "npm run typecheck && npm test", "prepublishOnly": "npm run check"}
+}
